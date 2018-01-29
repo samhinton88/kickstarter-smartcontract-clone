@@ -22,6 +22,8 @@ fs.ensureDirSync(buildPath);
 
 // loop over output object
 for (let contract in output) {
+  // contract will be the key on the output object
+  // write a JSON to given file paths
   fs.outputJsonSync(
     path.resolve(buildPath, contract + '.json'),
     output[contract]
