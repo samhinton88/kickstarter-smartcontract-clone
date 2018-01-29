@@ -53,4 +53,14 @@ describe('Campaigns', () => {
 
     assert.equal(accounts[0], manager);
   })
+
+  it('allows people to contribute money and marks them as approvers', async () => {
+    await campaign.methods.contribute().send({
+      value: '200',
+      from: accounts[1]
+    });
+
+    const isContributor = await campaign.methods.approvers(accounts[1]).call();
+    assert(isContributor);
+  })
 })
