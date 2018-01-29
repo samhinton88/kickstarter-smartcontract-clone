@@ -1,6 +1,6 @@
 const assert = require('assert');
 const ganache = require('ganache-cli');
-const Web3 = require('web3')
+const Web3 = require('web3');
 
 const provider = ganache.provider();
 
@@ -20,12 +20,16 @@ beforeEach(async () => {
 
   factory = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
     .deploy({ data: compiledFactory.bytecode })
-    .send({ from: accouts[0], gas: '1000000' });
+    .send({ from: accounts[0], gas: '1000000' });
+
+  factory.setProvider(provider)
 
   await factory.methods.createCampaign('100').send({
     from: accounts[0],
-    gass: '1000000'
+    gas: '1000000'
   });
+
+
 
   // es6 syntax -> take the first element from the array
   [campaignAddress] = await factory.methods.getDeployedCampaigns().call();
@@ -34,4 +38,13 @@ beforeEach(async () => {
     JSON.parse(compiledCampaign.interface),
     campaignAddress
   );
+
+  // campaign.setProvider(provider)
+});
+
+describe('Campaigns', () => {
+  it('deploys a factory and a campaign', () => {
+    assert.ok(factory.options.address);
+    assert.ok(campaign.options.address);
+  })
 })
