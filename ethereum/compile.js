@@ -24,8 +24,9 @@ fs.ensureDirSync(buildPath);
 for (let contract in output) {
   // contract will be the key on the output object
   // write a JSON to given file paths
+  // delete colon from key when inserting it as file name
   fs.outputJsonSync(
-    path.resolve(buildPath, contract + '.json'),
+    path.resolve(buildPath, contract.replace(':', '') + '.json'),
     output[contract]
   );
 }
