@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import factory from '../ethereum/factory';
-import { Card } from 'semantic-ui-react';
+import { Card, Button } from 'semantic-ui-react';
 
 class CampaignIndex extends Component {
   // static method that is particular to next.js
@@ -23,10 +23,19 @@ class CampaignIndex extends Component {
   }
 
   render() {
-    return <div>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
+    return (
+      <div>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.12/semantic.min.css"></link>
 
-    { this.renderCampaigns() }</div>
+        { this.renderCampaigns() }
+        <Button
+          content="Create Campaign"
+          icon="add circle"
+          primary
+        />
+
+      </div>
+    );
   }
 }
 
