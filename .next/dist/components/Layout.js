@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Header = require('./Header');
+
+var _Header2 = _interopRequireDefault(_Header);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/samhinton/code/samhinton88/kickstarter-smartcontract-clone/components/Layout.js';
@@ -16,18 +20,18 @@ exports.default = function (props) {
   return _react2.default.createElement('div', {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
-    }
-  }, _react2.default.createElement('h1', {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 6
     }
-  }, 'I\'m a header'), props.children, _react2.default.createElement('h1', {
+  }, _react2.default.createElement(_Header2.default, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
+    }
+  }), props.children, _react2.default.createElement('h1', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     }
   }, 'I\'m a footer'));
 };
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwicHJvcHMiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsQUFBTyxBQUVQOzs7Ozs7OztrQkFBZSxVQUFBLEFBQUMsT0FBVSxBQUN4Qjt5QkFDRSxjQUFBOztnQkFBQTtrQkFBQSxBQUNFO0FBREY7QUFBQSxHQUFBLGtCQUNFLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQURGLEFBQ0UsQUFDQyx3QkFGSCxBQUVTLEFBQ1AsMEJBQUEsY0FBQTs7Z0JBQUE7a0JBQUE7QUFBQTtBQUFBLEtBSkosQUFDRSxBQUdFLEFBR0w7QUFSRCIsImZpbGUiOiJMYXlvdXQuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL3NhbWhpbnRvbi9jb2RlL3NhbWhpbnRvbjg4L2tpY2tzdGFydGVyLXNtYXJ0Y29udHJhY3QtY2xvbmUifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTGF5b3V0LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiSGVhZGVyIiwicHJvcHMiLCJjaGlsZHJlbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUEsQUFBTzs7OztBQUNQLEFBQU8sQUFBWSxBQUVuQjs7Ozs7Ozs7a0JBQWUsVUFBQSxBQUFDLE9BQVUsQUFDeEI7eUJBQ0UsY0FBQTs7Z0JBQUE7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRSxBQUFDOztnQkFBRDtrQkFERixBQUNFLEFBQ0M7QUFERDtBQUFBLFlBREYsQUFFUyxBQUNQLDBCQUFBLGNBQUE7O2dCQUFBO2tCQUFBO0FBQUE7QUFBQSxLQUpKLEFBQ0UsQUFHRSxBQUdMO0FBUkQiLCJmaWxlIjoiTGF5b3V0LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9zYW1oaW50b24vY29kZS9zYW1oaW50b244OC9raWNrc3RhcnRlci1zbWFydGNvbnRyYWN0LWNsb25lIn0=
